@@ -33,41 +33,30 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Halaman Utama"),
+        title: const Text("Belajar Flutter"),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),
 
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                Text("Text 1"),
-                Text("Text 4"),
-                Text("Text 7"),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                Text("Text 2"),
-                Text("Text 5"),
-                Text("Text 8"),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                Text("Text 3"),
-                Text("Text 6"),
-                Text("Text 9"),
-              ],
-            ),
-          ],
+        child: Column(
+            children: [
+              Expanded(
+              flex: 2,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,horizontal: 20),
+                child: Text("ini text dalam container"),
+                color: Colors.red,
+              )),
+              const SizedBox(
+          height: 100.0,
+      ) ,
+
+    Expanded(
+    child: Container(
+      color: Colors.blue,
+    )
         ),
-      ),
-    );
+  ])));
   }
 }
